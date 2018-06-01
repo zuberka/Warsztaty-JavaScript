@@ -22,9 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         for (var i = 0; i < imgArr.length; i++) {
 
-            if (imgArr[i].dataset.imgTag.indexOf(imgTag) > -1) {
+            if (imgArr[i].dataset.tag.indexOf(imgTag) > -1) {
 
-                imgArr[i].classList.add(('invisible'));
+                imgArr[i].classList.add('invisible');
+            }
+            else{
+                imgArr[i].classList.remove('invisible');
             }
         }
 
@@ -39,9 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         for (var i = 0; i < imgArr.length; i++) {
 
-            if (imgArr[i].dataset.imgTag.indexOf(imgTag) > -1) {
+            if (imgArr[i].dataset.tag.indexOf(imgTag) > -1) {
 
                 imgArr[i].classList.remove('invisible');
+            }
+            else{
+                imgArr[i].classList.add('invisible');
             }
         }
 

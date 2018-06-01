@@ -40,9 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             taskEl.value = '';
 
+            counter++;
+
             errorEl.innerText = counter;
 
-            counter++;
+
 
             var deleteBtn = document.createElement('button');
             deleteBtn.innerText = 'Delete';
@@ -58,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             completeBtn.addEventListener('click', function () {
 
-                counter++;
 
                 if (newLi) {
                     newLi.style.color = "red";
@@ -67,13 +68,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 }else{
                     newLi.style.color = "black";
                     newLi.classList.remove('done');
-                    counter --;
+
                 }
             });
 
             deleteBtn.addEventListener('click', function () {
 
                 newLi.parentElement.removeChild(newLi);
+
+                counter--;
+
+                errorEl.innerText = counter;
             })
 
         } else {
@@ -90,7 +95,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         for (var i = 0; i < delAll.length; i++) {
             delAll[i].parentElement.removeChild(delAll[i]);
+            counter--;
         }
+        errorEl.innerText = counter;
     });
 });
 

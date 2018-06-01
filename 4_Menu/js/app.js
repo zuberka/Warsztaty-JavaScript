@@ -18,15 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
             if (ul) {
 
                 ul.style.display = 'block';
-
             }
-
-
         });
 
-
         mainLi[i].addEventListener('mouseout', function () {
-
 
             var ul = this.querySelector('ul');
 
@@ -37,9 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
-
     }
-
 });
 
 
